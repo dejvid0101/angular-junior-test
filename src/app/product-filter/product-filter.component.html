@@ -1,0 +1,5 @@
+<p>Min price:</p>
+<input #minField class="filterInput" [ngClass]="{'errorField': isError}" type="number" (change)="updateMinPrice($event)">
+<p>Max price:</p>
+<input #maxField class="filterInput" [ngClass]="{'errorField': isError}" type="number" (change)="updateMaxPrice($event)">
+<button (click)="emitRangeChanged()">Update</button>

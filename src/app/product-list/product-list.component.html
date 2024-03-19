@@ -1,6 +1,9 @@
 
-<div>
+<div *ngFor="let product of filteredProducts">
     <div>Modify me to show all products</div> 
-    <h2>{{ products[0].name }}</h2>
-    <p>Price: {{ products[0].price }}</p>
+    <h2>{{ product.name }}</h2>
+    <p>Price: {{ product.price|priceFormatter }}</p>
 </div>
+
+
+<app-product-filter (range)="updateList($event)"></app-product-filter>
